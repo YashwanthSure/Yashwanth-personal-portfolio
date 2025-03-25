@@ -98,7 +98,7 @@ const Contact = () => {
                 <Github size={22} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/yashwanth-sure-5972b2283/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-12 w-12 bg-muted rounded-full flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
