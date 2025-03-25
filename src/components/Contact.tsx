@@ -76,14 +76,14 @@ const Contact = () => {
               <ContactCard 
                 icon={<Mail size={24} />}
                 title="Email"
-                value="hello@yashwanth.dev"
-                href="mailto:hello@yashwanth.dev"
+                value="yaswanthsure2004@gmail.com"
+                href="mailto:yaswanthsure2004@gmail.com"
               />
               <ContactCard 
                 icon={<Phone size={24} />}
                 title="Phone"
-                value="+1 (555) 123-4567"
-                href="tel:+15551234567"
+                value="+91 6301067478"
+                href="tel:+916301067478"
               />
             </div>
             
