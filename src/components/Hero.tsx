@@ -11,31 +11,35 @@ const Hero = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] animate-float" />
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 left-1/5 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container-custom">
+      <div className="container-custom z-10">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
-          <div className="badge bg-muted border-0">
-            Full Stack Web Developer
+          <div className="glass px-4 py-1.5 rounded-full">
+            <span className="text-primary text-sm font-medium">Computer Science Student</span>
           </div>
           
           <h1 className="heading-xl">
-            Hi, I'm <span className="text-primary">Yashwanth</span>
+            Hi, I'm <span className="text-primary relative inline-block">
+              Yashwanth
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary/30 rounded-full"></span>
+            </span>
           </h1>
           
           <p className="body-lg max-w-2xl mx-auto">
-            I craft elegant, user-centered web applications with modern technologies. 
-            Passionate about creating seamless digital experiences that solve real problems.
+            A passionate student developer exploring the world of web development. 
+            I'm learning to build user-friendly applications and websites with modern technologies.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
-            <Button asChild size="lg" className="rounded-full px-8">
+            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-primary/20">
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-              <a href="#projects">View My Work</a>
+            <Button variant="outline" size="lg" className="rounded-full px-8 bg-white/50 hover:bg-white/70">
+              <a href="#projects">See My Projects</a>
             </Button>
           </div>
         </div>
@@ -43,8 +47,8 @@ const Hero = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" aria-label="Scroll to about section">
-          <ArrowDown size={24} className="text-muted-foreground" />
+        <a href="#about" className="glass p-3 rounded-full flex items-center justify-center" aria-label="Scroll to about section">
+          <ArrowDown size={20} className="text-primary" />
         </a>
       </div>
     </section>

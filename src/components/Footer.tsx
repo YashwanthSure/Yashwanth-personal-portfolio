@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <div className="text-xl font-display font-bold mb-1">Yashwanth</div>
             <p className="text-sm text-muted-foreground">
-              Full Stack Web Developer
+              Computer Science Student
             </p>
           </div>
           

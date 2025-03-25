@@ -10,7 +10,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (
-    <div className="glass p-6 rounded-2xl card-highlight">
+    <div className="glass p-6 rounded-2xl card-highlight h-full">
       <div className="h-12 w-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
         {icon}
       </div>
@@ -25,62 +25,60 @@ const About = () => {
     <section id="about" className="section-spacing">
       <div className="container-custom">
         <div className="mb-16 max-w-3xl mx-auto text-center">
-          <h2 className="heading-lg mb-6 animate-slide-up">About Me</h2>
-          <p className="body-lg animate-slide-up" style={{ animationDelay: '150ms' }}>
-            I'm a passionate full stack web developer with a strong foundation in both frontend and backend technologies. 
-            I enjoy transforming complex problems into simple, beautiful and intuitive solutions.
+          <h2 className="heading-lg mb-6 reveal">About Me</h2>
+          <p className="body-lg reveal" style={{ transitionDelay: '150ms' }}>
+            I'm a computer science student with a passion for web development. Currently learning and building 
+            projects to improve my skills in both frontend and backend technologies.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal" style={{ transitionDelay: '300ms' }}>
           <FeatureCard 
             icon={<Code size={24} />}
-            title="Frontend Development"
-            description="I create responsive, intuitive interfaces using modern JavaScript frameworks and libraries like React, with a focus on performance and accessibility."
+            title="Learning Frontend"
+            description="I'm exploring HTML, CSS, JavaScript and React to create responsive and user-friendly web interfaces that look good on all devices."
           />
           <FeatureCard 
             icon={<Globe size={24} />}
-            title="Backend Development"
-            description="I design and implement efficient, scalable server-side applications and APIs using Node.js, Express, and modern database solutions."
+            title="Exploring Backend"
+            description="I'm learning Node.js, Express, and databases to understand how to build server-side applications and APIs that power websites."
           />
           <FeatureCard 
             icon={<Users size={24} />}
-            title="User-Centered Approach"
-            description="I believe in creating digital products that not only look good but also provide meaningful and relevant experiences to users."
+            title="Student Projects"
+            description="I work on personal projects and assignments to apply what I'm learning and build a portfolio that showcases my growth as a developer."
           />
         </div>
         
-        <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
+        <div className="mt-16 grid md:grid-cols-2 gap-12 items-center reveal" style={{ transitionDelay: '450ms' }}>
           <div className="space-y-6 order-2 md:order-1">
-            <h3 className="heading-md">My Journey</h3>
+            <h3 className="heading-md">My Learning Journey</h3>
             <p className="body-md">
-              My journey into web development began with a curiosity about how websites work. 
-              This curiosity quickly evolved into a passion for creating web applications that combine 
-              technical excellence with exceptional user experiences.
+              I started my coding journey with basic HTML and CSS, creating simple websites to understand 
+              the fundamentals of web development. This sparked my interest in building more interactive experiences.
             </p>
             <p className="body-md">
-              I continuously expand my skills by exploring new technologies and methodologies, 
-              staying up-to-date with industry trends, and applying best practices to deliver 
-              high-quality solutions that exceed expectations.
+              Currently, I'm focused on strengthening my JavaScript skills and learning React for frontend development. 
+              I'm also exploring backend technologies to understand how full-stack applications work.
             </p>
             <p className="body-md">
-              When I'm not coding, you'll find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community.
+              When I'm not studying or coding, I enjoy participating in coding challenges, watching tutorial videos, 
+              and collaborating with fellow students on small projects to enhance my skills.
             </p>
           </div>
-          <div className="relative h-[400px] md:h-auto order-1 md:order-2">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl" />
+          <div className="relative h-[400px] md:h-auto order-1 md:order-2 reveal" style={{ transitionDelay: '600ms' }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl" />
             <div className="absolute top-0 left-0 w-full h-full glass rounded-2xl transform rotate-1 opacity-30" />
             <div className="absolute top-0 left-0 w-full h-full glass rounded-2xl transform -rotate-2 opacity-30" />
             <div className="relative glass rounded-2xl p-6 h-full flex items-center justify-center">
               <div className="text-center">
                 <h4 className="heading-sm mb-3">Yashwanth</h4>
-                <p className="body-md mb-5">Full Stack Developer</p>
+                <p className="body-md mb-5">Computer Science Student</p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  <span className="badge bg-primary/10 text-primary">React</span>
-                  <span className="badge bg-primary/10 text-primary">Node.js</span>
-                  <span className="badge bg-primary/10 text-primary">TypeScript</span>
-                  <span className="badge bg-primary/10 text-primary">MongoDB</span>
+                  <span className="badge bg-blue-500/10 text-blue-600 border-0">HTML/CSS</span>
+                  <span className="badge bg-purple-500/10 text-purple-600 border-0">JavaScript</span>
+                  <span className="badge bg-teal-500/10 text-teal-600 border-0">React</span>
+                  <span className="badge bg-orange-500/10 text-orange-600 border-0">Node.js</span>
                 </div>
               </div>
             </div>

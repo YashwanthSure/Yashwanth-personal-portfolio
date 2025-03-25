@@ -14,11 +14,11 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl }: ProjectCardProps) => {
   return (
-    <div className="glass rounded-2xl overflow-hidden card-highlight h-full flex flex-col">
+    <div className="glass rounded-2xl overflow-hidden card-highlight h-full flex flex-col group">
       <div className="relative h-64 overflow-hidden">
-        <div className="absolute inset-0 bg-primary/10 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
           style={{ backgroundImage: `url(${image})` }}
         />
       </div>
@@ -58,26 +58,26 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl }: Pr
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with product catalog, cart system, and payment integration.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      title: "Personal Blog Website",
+      description: "A simple blog website built with HTML, CSS, and JavaScript. This was my first web project where I learned about responsive design.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
       githubUrl: "#",
       liveUrl: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team sharing functionality.",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      title: "Weather App",
+      description: "A weather application that fetches data from a weather API and displays current conditions and forecasts.",
+      tags: ["JavaScript", "API", "CSS"],
+      image: "https://images.unsplash.com/photo-1534088568595-a066f410bcda",
       githubUrl: "#",
       liveUrl: "#"
     },
     {
-      title: "Personal Finance Dashboard",
-      description: "A dashboard application for tracking personal finances, expenses, and budget planning.",
-      tags: ["TypeScript", "Chart.js", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      title: "To-Do List App",
+      description: "A simple task management application to keep track of daily tasks, with the ability to add, complete, and delete tasks.",
+      tags: ["React", "CSS", "LocalStorage"],
+      image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91",
       githubUrl: "#",
       liveUrl: "#"
     }
@@ -87,14 +87,14 @@ const Projects = () => {
     <section id="projects" className="section-spacing bg-secondary/50">
       <div className="container-custom">
         <div className="mb-16 max-w-3xl mx-auto text-center">
-          <h2 className="heading-lg mb-6 animate-slide-up">Projects</h2>
-          <p className="body-lg animate-slide-up" style={{ animationDelay: '150ms' }}>
-            Here are some of my recent projects showcasing my skills and experience 
-            in building web applications with modern technologies.
+          <h2 className="heading-lg mb-6 reveal">Student Projects</h2>
+          <p className="body-lg reveal" style={{ transitionDelay: '150ms' }}>
+            Here are some of the projects I've worked on during my learning journey.
+            Each project represents different skills and concepts I've learned.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal" style={{ transitionDelay: '300ms' }}>
           {projects.map((project, index) => (
             <ProjectCard 
               key={index}
@@ -108,11 +108,11 @@ const Projects = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center reveal" style={{ transitionDelay: '450ms' }}>
           <Button asChild variant="outline" size="lg" className="rounded-full px-8">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
-              View More on GitHub
+              See More on GitHub
             </a>
           </Button>
         </div>
